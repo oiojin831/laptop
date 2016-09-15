@@ -33,6 +33,9 @@ sudo adduser --gecos "Eung Jin Lee" oiojin831 --disabled-password
 # give root previlage
 sudo echo "oiojin831 ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
 
+echo $PUBLIC_KEY | cat >> /home/oiojin831/.ssh/authorized_keys
+echo $PUBLIC_KEY2 | cat >> /home/oiojin831/.ssh/authorized_keys
+
 sudo su - oiojin831 <<'EOF'
 # set ssh
 echo "in oiojin831"
@@ -41,8 +44,6 @@ mkdir .ssh
 chmod 700 .ssh
 touch .ssh/authorized_keys
 chmod 600 .ssh/authorized_keys
-echo $PUBLIC_KEY | cat >> .ssh/authorized_keys
-echo $PUBLIC_KEY2 | cat >> .ssh/authorized_keys
 
 # Zsh
 
