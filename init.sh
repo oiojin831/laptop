@@ -38,8 +38,8 @@ sudo mkdir /home/oiojin831/.ssh
 sudo chmod 700 /home/oiojin831/.ssh
 sudo touch /home/oiojin831/.ssh/authorized_keys
 sudo chmod 600 /home/oiojin831/.ssh/authorized_keys
-sudo echo $PUBLIC_KEY | cat >> /home/oiojin831/.ssh/authorized_keys
-sudo echo $PUBLIC_KEY2 | cat >> /home/oiojin831/.ssh/authorized_keys
+sudo echo $PUBLIC_KEY | sudo cat >> /home/oiojin831/.ssh/authorized_keys
+sudo echo $PUBLIC_KEY2 | sudo cat >> /home/oiojin831/.ssh/authorized_keys
 
 sudo su - oiojin831 <<'EOF'
 # set ssh
