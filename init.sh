@@ -76,5 +76,6 @@ wget -O ~/.oh-my-zsh/themes/xxf.zsh-theme https://gist.githubusercontent.com/oio
 # change theme
 sed -i "s/robbyrussell/xxf/" .zshrc
 
+sudo usermod -aG docker $(whoami)
 sudo chsh -s $(which zsh) oiojin831
 EOF
