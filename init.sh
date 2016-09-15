@@ -27,6 +27,21 @@ sudo apt-get install -yqq tmux
 # https://github.com/docker/docker/blob/master/hack/install.sh
 wget -qO- https://get.docker.com/ | sh
 
+#get latest docker compose released tag
+docker_compose_version="$(git ls-remote https://github.com/docker/compose | grep "refs/tag" | grep -oP "[0-9]+\.[0-9]+\.[0-9]+" | tail -n1)"
+
+# Install docker-compose
+sudo sh -c "curl -L https://github.com/docker/compose/releases/download/$docker_compose_version/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
+sudo chmod +x /usr/local/bin/docker-compose
+sudo sh -c "curl -L https://raw.githubusercontent.com/docker/compose/$docker_compose_version/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose"
+
+# Install docker-cleanup command
+cd /tmp
+git clone https://gist.github.com/76b450a0c986e576e98b.git
+cd 76b450a0c986e576e98b
+sudo mv docker-cleanup /usr/local/bin/docker-cleanup
+sudo chmod +x /usr/local/bin/docker-cleanup
+
 # add user
 sudo adduser --gecos "Eung Jin Lee" oiojin831 --disabled-password
 
