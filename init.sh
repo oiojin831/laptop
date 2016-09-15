@@ -33,6 +33,11 @@ sudo adduser --gecos "Eung Jin Lee" oiojin831 --disabled-password
 # give root previlage
 sudo echo "oiojin831 ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
 
+# initail env is in ubuntu user so we do this there
+mkdir /home/oiojin831/.ssh
+chmod 700 /home/oiojin831/.ssh
+touch /home/oiojin831/.ssh/authorized_keys
+chmod 600 /home/oiojin831/.ssh/authorized_keys
 echo $PUBLIC_KEY | cat >> /home/oiojin831/.ssh/authorized_keys
 echo $PUBLIC_KEY2 | cat >> /home/oiojin831/.ssh/authorized_keys
 
@@ -40,12 +45,6 @@ sudo su - oiojin831 <<'EOF'
 # set ssh
 echo "in oiojin831"
 cd ~
-mkdir .ssh
-chmod 700 .ssh
-touch .ssh/authorized_keys
-chmod 600 .ssh/authorized_keys
-
-# Zsh
 
 # Install vim plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
