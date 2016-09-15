@@ -46,7 +46,7 @@ echo $PUBLIC_KEY | cat >> .ssh/authorized_keys
 # Zsh
 
 # Install vim plug
-wget -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Dotfiles
 wget -O ~/.tmux.conf https://raw.githubusercontent.com/christoomey/dotfiles/master/tmux/tmux.conf
