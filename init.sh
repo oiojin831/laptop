@@ -42,6 +42,7 @@ chmod 700 .ssh
 touch .ssh/authorized_keys
 chmod 600 .ssh/authorized_keys
 echo $PUBLIC_KEY | cat >> .ssh/authorized_keys
+echo $PUBLIC_KEY2 | cat >> .ssh/authorized_keys
 
 # Zsh
 
