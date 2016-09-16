@@ -65,7 +65,7 @@ echo $PUBLIC_KEY2 | cat >> .ssh/authorized_keys
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Dotfiles
-wget -O ~/.tmux.conf https://raw.githubusercontent.com/christoomey/dotfiles/master/tmux/tmux.conf
+wget -O ~/.tmux.conf https://raw.githubusercontent.com/oiojin831/dotfiles/master/tmux.conf
 wget -O ~/.vimrc https://raw.githubusercontent.com/oiojin831/dotfiles/master/vimrc
 wget -O ~/.vimrc.bundles https://raw.githubusercontent.com/oiojin831/dotfiles/master/vimrc.bundles
 
