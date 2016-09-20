@@ -1,4 +1,28 @@
 # Development Machine setting
+init.sh은 linux에 docker, vim등 기본적인 설정들을 설정해주는 shell script이다.
+
+
+
+개발 머신 ec2만들기 -> 개발머신 init.sh -> rails project create script -> deploy
+script로 그냥 서버 deploy까지만.
+
+나중에 ci 공부하고 자동화하자. 욕심 부리지 말자
+일단 ci는 빼고 하자.
+수동으로 local에서 rspec 돌리고 github maste에 merge하면 staging으로 올라 가는거
+까지만 하자.
+ -> push to github -> merge pull request -> serverless로 deploy script 실행
+
+
+
+ [ ] 개발 머신은 cloudformation -> ec2 instance(자동 run init.sh)
+   [ ] cloudformation cli로 실행하기
+     [ ] 자동 script하기
+     [ ] 프로제트 종류 별로 docker 설정 
+       [ ] option을 정할수있는 script
+         [ ] 프로젝트 종류에 따라 docker-compose하는 파일 만들기
+           [ ] 배포까지 자동으로 다 설정되게끔 만들기
+
+           내 컴퓨터에서
 
 [ ] CloudFormation으로 cli로 작성하는거
 [ ] ip주소 가져온다음
